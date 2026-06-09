@@ -234,23 +234,25 @@ export default function Hero() {
 
   </div>
 </div>
-<div className="fixed bottom-4 right-3 md:right-6 md:bottom-6 z-[9999]">
+<div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-[9999] pointer-events-auto">
   <button
     className="
+      flex items-center justify-center
       w-12 h-12
       md:w-[60px] md:h-[60px]
       rounded-full
       bg-[#007fff]
       shadow-xl
-      flex items-center justify-center
       hover:scale-105
-      transition-all duration-300
+      transition-transform duration-300
     "
+    aria-label="Chat Support"
   >
     <svg
       viewBox="0 0 800 800"
-      className="w-5 h-5 md:w-7 md:h-7"
+      className="w-5 h-5 md:w-7 md:h-7 flex-shrink-0"
       fill="white"
+      preserveAspectRatio="xMidYMid meet"
     >
       <path
         fillRule="evenodd"

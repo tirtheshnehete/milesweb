@@ -13,8 +13,9 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "sans-serif" sans-serif;
   color: #1a1a2e;
+  overflow-x: hidden;
 }
 
 /* Custom scrollbar */
