@@ -7,6 +7,7 @@ export default function FloatingChatButton() {
         fixed
         bottom-4
         right-4
+        left-10
         md:bottom-6
         md:right-6
         z-[9999]
