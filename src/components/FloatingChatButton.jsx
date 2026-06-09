@@ -2,7 +2,7 @@
 
 export default function FloatingChatButton() {
   return (
-    <div className="fixed bottom-4 right-1 md:right-6 md:bottom-6 z-[9999]">
+    <div className="fixed bottom-4 -right-9 md:right-6 md:bottom-6 z-[9999]">
       <button
         aria-label="Chat Support"
         className="
