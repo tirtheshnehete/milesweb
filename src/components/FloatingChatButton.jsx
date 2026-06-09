@@ -2,26 +2,38 @@
 
 export default function FloatingChatButton() {
   return (
-    <div className="fixed bottom-4 -right-9 md:right-6 md:bottom-6 z-[9999]">
+    <div
+      className="
+        fixed
+        bottom-4
+        right-4
+        md:bottom-6
+        md:right-6
+        z-[9999]
+      "
+      style={{
+        maxWidth: "calc(100vw - 16px)",
+      }}
+    >
       <button
         aria-label="Chat Support"
         className="
           flex items-center justify-center
           w-12 h-12
+          sm:w-14 sm:h-14
           md:w-[60px] md:h-[60px]
           rounded-full
           bg-[#007fff]
           shadow-xl
-          hover:scale-105
           transition-transform
           duration-300
+          hover:scale-105
         "
       >
         <svg
           viewBox="0 0 800 800"
-          className="w-5 h-5 md:w-7 md:h-7"
+          className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7"
           fill="white"
-          preserveAspectRatio="xMidYMid meet"
         >
           <path
             fillRule="evenodd"
