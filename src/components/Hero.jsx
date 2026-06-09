@@ -234,12 +234,27 @@ export default function Hero() {
 
   </div>
 </div>
-<div className="fixed bottom-6 right-6 z-50">
-  <button className="w-[60px] h-[60px] rounded-full bg-[#007fff] shadow-xl flex items-center justify-center hover:scale-105 transition-transform">
+<div className="fixed bottom-4 right-4 sm:bottom-5 sm:right-5 md:bottom-6 md:right-6 z-50">
+  <button
+    className="
+      w-12 h-12
+      sm:w-14 sm:h-14
+      md:w-[60px] md:h-[60px]
+      rounded-full
+      bg-[#007fff]
+      shadow-xl
+      flex items-center justify-center
+      hover:scale-105
+      transition-all duration-300
+    "
+  >
     <svg
       viewBox="0 0 800 800"
-      width="28"
-      height="28"
+      className="
+        w-5 h-5
+        sm:w-6 sm:h-6
+        md:w-7 md:h-7
+      "
       fill="white"
     >
       <path
