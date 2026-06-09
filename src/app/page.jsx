@@ -17,6 +17,7 @@ import Footer from "../components/Footer";
 import GoogleReviews from "../components/GoogleReviews";
 import G2Reviews from "../components/G2Reviews";
 import HeroStats from "../components/HeroStats";
+import FloatingChatButton from "../components/FloatingChatButton";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <AnnouncementBar />
       <Navbar />
       <Hero />
+      <FloatingChatButton/>
       <Pricing />
       <MoneyBack />
       <SuccessStories />
