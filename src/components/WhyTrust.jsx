@@ -1,5 +1,5 @@
-
 "use client";
+
 const features = [
   {
     title: "Fast Indian servers",
@@ -7,8 +7,12 @@ const features = [
     iconBg: "#e8f0fe",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
-        <rect x="2" y="3" width="20" height="4" rx="1" /><rect x="2" y="10" width="20" height="4" rx="1" /><rect x="2" y="17" width="20" height="4" rx="1" />
-        <circle cx="18" cy="5" r="1" fill="#3b82f6" /><circle cx="18" cy="12" r="1" fill="#3b82f6" /><circle cx="18" cy="19" r="1" fill="#3b82f6" />
+        <rect x="2" y="3" width="20" height="4" rx="1" />
+        <rect x="2" y="10" width="20" height="4" rx="1" />
+        <rect x="2" y="17" width="20" height="4" rx="1" />
+        <circle cx="18" cy="5" r="1" fill="#3b82f6" />
+        <circle cx="18" cy="12" r="1" fill="#3b82f6" />
+        <circle cx="18" cy="19" r="1" fill="#3b82f6" />
       </svg>
     ),
   },
@@ -18,7 +22,8 @@ const features = [
     iconBg: "#fef3e2",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
-        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" /><circle cx="12" cy="7" r="4" />
+        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+        <circle cx="12" cy="7" r="4" />
       </svg>
     ),
   },
@@ -28,7 +33,8 @@ const features = [
     iconBg: "#e8f5ee",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
-        <polyline points="16 16 12 12 8 16" /><line x1="12" y1="12" x2="12" y2="21" />
+        <polyline points="16 16 12 12 8 16" />
+        <line x1="12" y1="12" x2="12" y2="21" />
         <path d="M20.39 18.39A5 5 0 0018 9h-1.26A8 8 0 103 16.3" />
       </svg>
     ),
@@ -62,89 +68,97 @@ const features = [
     iconBg: "#fef3e2",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
-        <path d="M3 12a9 9 0 109 9" /><polyline points="3 3 3 9 9 9" />
+        <path d="M3 12a9 9 0 109 9" />
+        <polyline points="3 3 3 9 9 9" />
       </svg>
     ),
   },
 ];
 
-
 export default function WhyTrust() {
   return (
     <section
-      className="py-20 px-4 sm:px-6 lg:px-8"
+      className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8"
       style={{
-        background: "linear-gradient(135deg, #dce8fa 0%, #f0eaf8 50%, #f8eaf0 100%)",
+        background:
+          "linear-gradient(135deg, #dce8fa 0%, #f0eaf8 50%, #f8eaf0 100%)",
       }}
     >
-      {/* Title — no blue highlight, pure black */}
       <h2
-        className="font-extrabold text-gray-900 text-center mb-14 leading-tight"
-        style={{ fontSize: "clamp(24px, 3vw, 38px)", maxWidth: "860px", margin: "0 auto 56px" }}
+        className="font-extrabold text-gray-900 text-center leading-tight mb-10 sm:mb-14"
+        style={{
+          fontSize: "clamp(24px, 3vw, 38px)",
+          maxWidth: "860px",
+          marginLeft: "auto",
+          marginRight: "auto",
+        }}
       >
         Why 10,00,000+ websites trust MilesWeb hosting
       </h2>
 
-      {/* 3×2 grid — dividers only, no card shadows */}
       <div
-        className="mx-auto mb-14 bg-white"
-        style={{
-          maxWidth: "1200px",
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          border: "1px solid #dde3ee",
-          borderRadius: "4px",
-          overflow: "hidden",
-        }}
+        className="mx-auto mb-10 sm:mb-14 bg-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-[#dde3ee] rounded overflow-hidden"
+        style={{ maxWidth: "1200px" }}
       >
-        {features.map((f, i) => {
-          const isLastRow = i >= 3;
-          const isLastCol = (i + 1) % 3 === 0;
-          return (
+        {features.map((f, i) => (
+          <div
+            key={f.title}
+            className="
+              p-6
+              sm:p-8
+              lg:p-10
+              border-b border-[#dde3ee]
+              md:[&:nth-child(odd)]:border-r
+              lg:border-r
+              lg:[&:nth-child(3n)]:border-r-0
+              lg:[&:nth-last-child(-n+3)]:border-b-0
+            "
+          >
             <div
-              key={f.title}
-              className="p-10 sm:p-12"
+              className="flex items-center justify-center rounded-full mb-5 sm:mb-7 flex-shrink-0"
               style={{
-                borderRight: isLastCol ? "none" : "1px solid #dde3ee",
-                borderBottom: isLastRow ? "none" : "1px solid #dde3ee",
+                width: "56px",
+                height: "56px",
+                background: f.iconBg,
               }}
             >
-              {/* Icon circle */}
-              <div
-                className="flex items-center justify-center rounded-full mb-7 flex-shrink-0"
-                style={{ width: "56px", height: "56px", background: f.iconBg }}
-              >
-                {f.icon}
-              </div>
-
-              <h3
-                className="font-bold text-gray-900 mb-5 leading-snug"
-                style={{ fontSize: "20px" }}
-              >
-                {f.title}
-              </h3>
-
-              <p className="text-gray-500 leading-relaxed" style={{ fontSize: "15px" }}>
-                {f.desc}
-              </p>
+              {f.icon}
             </div>
-          );
-        })}
+
+            <h3
+              className="font-bold text-gray-900 mb-4 sm:mb-5 leading-snug"
+              style={{ fontSize: "20px" }}
+            >
+              {f.title}
+            </h3>
+
+            <p
+              className="text-gray-500 leading-relaxed"
+              style={{ fontSize: "15px" }}
+            >
+              {f.desc}
+            </p>
+          </div>
+        ))}
       </div>
 
-      {/* CTA */}
       <div className="text-center">
-        
-          <a href="#pricing"
-          className="inline-block font-semibold text-white rounded-xl transition-colors"
+        <a
+          href="#pricing"
+          className="inline-flex items-center justify-center font-semibold text-white rounded-xl transition-colors w-full sm:w-auto"
           style={{
             background: "#2563eb",
             fontSize: "15px",
             padding: "14px 44px",
             textDecoration: "none",
+            maxWidth: "280px",
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.background = "#1d4ed8")}
-          onMouseLeave={(e) => (e.currentTarget.style.background = "#2563eb")}
+          onMouseEnter={(e) =>
+            (e.currentTarget.style.background = "#1d4ed8")
+          }
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.background = "#2563eb")
+          }
         >
           Get Started
         </a>
